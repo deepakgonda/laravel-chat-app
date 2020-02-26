@@ -15,11 +15,11 @@ class CreateRolesSeeder extends Seeder
         $roles = [
             [
                 'name' => 'Admin',
-                'is_active' => 'true',
+                'is_active' => 1,
             ],
             [
                 'name' => 'User',
-                'is_active' => 'true',
+                'is_active' => 1,
             ],
         ];
 

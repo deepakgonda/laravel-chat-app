@@ -8,6 +8,10 @@
                 <div class="card-header">Dashboard</div>
                 <div class="card-body">
                     You are normal user.
+
+                    <?php echo $user ?>
+                    <br />
+                    <?php echo $roles ?>
                 </div>
             </div>
         </div>

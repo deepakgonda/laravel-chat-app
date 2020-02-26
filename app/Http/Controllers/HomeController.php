@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,13 +23,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        $user = Auth::user();
+        $roles =$user->roles()->first();
+
+
+        return view('user.home', ["user" => json_encode($user), "roles" => json_encode($roles)]);
     }
 
     
     public function adminHome()
     {
-        return view('adminHome');
+        return view('admin.home');
     }
 
 }
